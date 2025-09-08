@@ -2,7 +2,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken')
 // register endpoint
 const User = require('../models/User');
-const jwt_secret = '12345';
+const jwt_secret = process.env.JWT_SECRET;
 
 const registerUser = async (req,res) => {
     try {
