@@ -61,7 +61,9 @@ This project demonstrates how to implement authentication and authorization in a
   ```json
   {
     "username": "user1",
-    "password": "password123"
+    "password": "password123",
+    "email": "user1@example.com",
+    "role": "user",
   }
   ```
 
@@ -80,10 +82,18 @@ This project demonstrates how to implement authentication and authorization in a
 
 ### Protected Route
 
-- **URL:** `/api/protected`
+- **URL:** `/api/home/welcome`
 - **Method:** `GET`
 - **Headers:**
 
+- **URL:** `/api/admin/welcome`
+- **Method:** `GET`
+- **Headers:**
+  
+- **URL:** `/api/images/upload`
+- **Method:** `POST`
+- **Headers:**
+- **Body:** `form-data` with a file field named `image`
   ```
   Authorization: Bearer <token>
   ```
